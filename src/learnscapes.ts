@@ -38,6 +38,16 @@ export class Learnscape {
         inputbox.insertAdjacentElement("beforeend", input)
         return input
     }
+    addNumberUnitBox(box: IBox, val: number, unit: string) {
+        const databox = this.addBox(box)
+        databox.classList.add("databox")
+        databox.style.fontSize = `${0.5 * box.h}vmin`
+        const valbox = htmlToElement(`<span class="valbox">${val}</span>`)
+        const unitbox = htmlToElement(`<span class="unitbox">${unit}</span>`)
+        databox.insertAdjacentElement("beforeend", valbox)
+        databox.insertAdjacentElement("beforeend", unitbox)
+        return box
+    }
 }
 
 /**
