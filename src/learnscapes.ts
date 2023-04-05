@@ -46,7 +46,24 @@ export class Learnscape {
         const unitbox = htmlToElement(`<span class="unitbox">${unit}</span>`)
         databox.insertAdjacentElement("beforeend", valbox)
         databox.insertAdjacentElement("beforeend", unitbox)
-        return box
+        return databox
+    }
+    addVectorBox(box: IBox, name: string) {
+        const vectorbox = this.addBox(box)
+        vectorbox.classList.add("vectorbox")
+        vectorbox.style.fontSize = `${0.6 * 4}vmin` 
+        vectorbox.innerHTML = `${name}&nbsp;=&nbsp;`
+    }
+    numberBoxToInput(databox: HTMLElement) {
+        let v = databox!.querySelector(".valbox")
+        let solution = v?.textContent
+        v!.innerHTML = `<input class="" style='width:${1.8}em'>`
+        databox!.querySelector(".valbox input")?.addEventListener("input", (e: any)=>{
+            if(parseFloat(e.currentTarget?.value || 0) === parseFloat(solution || "")) {
+                e.currentTarget.classList.add("correct")
+            }
+        })
+        
     }
 }
 

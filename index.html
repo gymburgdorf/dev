@@ -29,6 +29,9 @@
 
       .box>input {
         position: absolute;
+      }
+
+      input {
         inset: 0 0 0 0;
         border: none;
         border-radius: 0.2em;
@@ -38,11 +41,23 @@
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        background-color: aquamarine;
+        /*background-color: rgb(158, 201, 245);*/
         border-radius: 0.2em;
       }
 
       .databox .unitbox {font-size: 0.8em; opacity: 0.8} 
+
+      .vectorbox {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        text-align: left;
+        background-color: rgb(158, 201, 245);
+        padding: 0.3em;
+        border-radius: 0.2em;
+      }
+
+      .correct {background-color: aquamarine;}
 
       /* for chrome */
     input[type=number]::-webkit-inner-spin-button,
