@@ -8,6 +8,20 @@ export class DevComponent extends HTMLElement {
 		console.log("connected");
 	  this.render();
 	}
+
+  disconnectedCallback() {
+    // Called when the element is removed from the DOM
+  }
+
+  adoptedCallback() {
+    // Called when the element is moved to a new document
+  }
+	static get observedAttributes() {
+    return ['attribute1', 'attribute2'];
+  }
+  attributeChangedCallback(name: any, oldValue: any, newValue: any) {
+    // Called when observed attributes are added, removed, or changed
+  }
   
 	render() {
 		if(!this.shadowRoot) return
