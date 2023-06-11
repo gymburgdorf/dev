@@ -9,7 +9,7 @@ export default defineConfig({
       entry: {
         lib: resolve(__dirname, 'src/lib.ts'),
         learnscape: resolve(__dirname, 'src/learnscapes.ts'),
-        devComponent: resolve(__dirname, 'src/DevComponent.ts')
+        DevComponent: resolve(__dirname, 'src/DevComponent.ts')
       },
       formats: ["es", "cjs"]
     }
