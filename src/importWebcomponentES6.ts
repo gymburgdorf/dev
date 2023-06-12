@@ -1,3 +1,4 @@
+//@ts-ignore
 import {DevComponent} from "https://gymburgdorf.github.io/dev/DevComponent.js"
 
 const devy = new DevComponent()

@@ -21,6 +21,8 @@ export class DevComponent extends HTMLElement {
   }
   attributeChangedCallback(name: any, oldValue: any, newValue: any) {
     // Called when observed attributes are added, removed, or changed
+	console.log(name, oldValue, newValue)
+	
   }
   
 	render() {
