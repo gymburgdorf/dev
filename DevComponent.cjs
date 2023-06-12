@@ -1,4 +1,4 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});class e extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"})}connectedCallback(){console.log("connected"),this.render()}render(){this.shadowRoot&&(this.shadowRoot.innerHTML=`
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});class e extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"})}connectedCallback(){console.log("connected"),this.render()}disconnectedCallback(){}adoptedCallback(){}static get observedAttributes(){return["attribute1","attribute2"]}attributeChangedCallback(t,o,n){console.log(t,o,n)}render(){this.shadowRoot&&(this.shadowRoot.innerHTML=`
 		<style>
 		  /* Add component styles here */
 		  :host {

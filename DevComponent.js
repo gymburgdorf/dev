@@ -1,9 +1,19 @@
-class e extends HTMLElement {
+class n extends HTMLElement {
   constructor() {
     super(), this.attachShadow({ mode: "open" });
   }
   connectedCallback() {
     console.log("connected"), this.render();
+  }
+  disconnectedCallback() {
+  }
+  adoptedCallback() {
+  }
+  static get observedAttributes() {
+    return ["attribute1", "attribute2"];
+  }
+  attributeChangedCallback(e, t, o) {
+    console.log(e, t, o);
   }
   render() {
     this.shadowRoot && (this.shadowRoot.innerHTML = `
@@ -27,7 +37,7 @@ class e extends HTMLElement {
   }
 }
 console.log("define");
-customElements.define("dev-component", e);
+customElements.define("dev-component", n);
 export {
-  e as DevComponent
+  n as DevComponent
 };
