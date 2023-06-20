@@ -68,6 +68,8 @@ export class MyPath extends HTMLElement {
 		return ["points"];
 	}
 	attributeChangedCallback(name: any, oldValue: any, newValue: any) {
+		console.log({name, oldValue, newValue});
+		
 		this.render()
 	}
 
@@ -111,6 +113,7 @@ export class MySpan extends HTMLElement {
 		return ["points"];
 	}
 	attributeChangedCallback(name: any, oldValue: any, newValue: any) {
+		console.log({name, oldValue, newValue});
 		this.render()
 	}
 

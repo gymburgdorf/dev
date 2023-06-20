@@ -1,6 +1,6 @@
 //@ts-ignore
 import {DevComponent} from "https://gymburgdorf.github.io/dev/DevComponent.js"
-import {WebcompTests} from "./WebcompTests"
+import {WebcompTests} from "./WebcompTests.js"
 
 const wt = new WebcompTests()
 const devy = new DevComponent()
