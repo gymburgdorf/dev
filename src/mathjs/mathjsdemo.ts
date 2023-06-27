@@ -4,15 +4,16 @@ declare var MathJax: any
 const input = document.getElementById("input") as HTMLInputElement
 const output = document.querySelector(".output") as HTMLDivElement
 
-console.log(jax("n"));
 
 
 input?.addEventListener("input", parseEq)
 
+parseEq()
+
 function parseEq() {
     try {
         const r = parse(input?.value)
-        const t = r.toTex({parenthesis: "auto"})
+        const t = r.toTex({parenthesis: false})
 
         console.log({r, t});
         output.innerHTML = '';
@@ -35,7 +36,7 @@ function parseEq() {
           MathJax.startup.document.updateDocument();
         })
     }
-    catch(e) {
+    catch(e: any) {
         console.warn(e.message)
     }
 
